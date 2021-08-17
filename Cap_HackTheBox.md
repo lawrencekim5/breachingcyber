@@ -27,6 +27,13 @@ I used Nathan's credentials and logged into the FTP server. After using the comm
 
 After opening user.txt, I saw the string, "35cda8e779ac73eab2bc55cd5933273f". I had no idea of what this was, but is sure looked important.
 Since there wasn't much else on the FTP server, I sshed into box using Nathan's credentials.
+(After asking a cool person named Alex for help, he told me that the user.txt hash is a flag that should be submitted to HackTheBox for points. Shout out to nosecurity.blog)
 
-getcap -r / 2>/dev/null
+I got stuck on trying to figure out how to escalate privilieges. I did some googling and learned about Linux file capabiliites. From what I understood, file capabilities can grant binaries or executables specific privileges that are usually only given to root users. By using the "getcap -r / 2>/dev/null" command, I was able to recursvelty get the capabiliities of all binaries on the machine, while outputting all errors to /dev/null to make the output readable.
+
+The command output was this: "/usr/bin/python3.8 = cap_setuid,cap_net_bind_service+eip". From this, I saw that the python3.8 binary had a setuid capability. This could be used to set our uid to 0, or root, allowing us to escalate privileges with Python.
+
+I looked at gtfobins.github.io to search for a way to get root access through Python3.8. Using the command, "python3.8 -c 'import os; os.setuid(0); os.system("/bin/bash")'" instantly led to a root shell. After running "cat /etc/shadow", I found the hash to the root user to be: "$6$8vQCitG5q4/cAsI0$Ey/2luHcqUjzLfwBWtArUls9.IlVMjqudyWNOUFUGDgbs9T0RqxH6PYGu/ya6yG0MNfeklSnBLlOskd98Mqdm0:18762:0:99999:7". 
+
+Navigation to the root directory also led to a file named "root.txt". Opening the file revealed a hash of "079a3830bafe50c66d9c06a8fbb86197".
 
