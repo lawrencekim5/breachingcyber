@@ -1,0 +1,12 @@
+Let's do this.
+
+nmap scan to start things off. Simple as pie.
+
+Nmap scan report for 10.10.10.234
+Host is up (0.15s latency).
+Not shown: 65437 closed ports, 95 filtered ports
+PORT      STATE SERVICE VERSION
+22/tcp    open  ssh     OpenSSH 7.9 (FreeBSD 20200214; protocol 2.0)
+80/tcp    open  http    Apache httpd 2.4.46 ((FreeBSD) PHP/7.4.15)
+33060/tcp open  mysqlx?
+
