@@ -1,10 +1,10 @@
-## Welcome to Lawrence's Blog
+## Welcome to Lawrence Kim's Blog
+
+CyberWinging!
 
 This is a site where I will post writeups about certifcations, CTFs, competitions, and other personal projects.
 
-I am very inexperienced when it comes to sharing my thoughts. The last time I shared a personal thought was when I told someone that I did not think ham was meat. The ridicule that I experienced still haunts me to this day. Ever since then I've become averse to human interaction. 
-
-Of course that's a joke, but it is true that I haven't written a blog before. I hope to write entertaining as well as informative posts, so please read some of my posts and feel free to give feedback!
+Etymology: I picked CyberWinging as the blog name because I am winging cybersecurity. I also like birds so I wanted to make a bird pun.
 
 ### Markdown
 
