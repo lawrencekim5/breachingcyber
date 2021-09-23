@@ -6,6 +6,9 @@ This is a site where I will post writeups about certifcations, CTFs, competition
 
 Etymology: I picked CyberWinging as the blog name because I am winging cybersecurity. I also like birds so I wanted to make a bird pun.
 
+
+Take a look at [HackTheBox_Knife](/Writeups/HackTheBox_Knife.md) for more information.
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. I did not know this and am keeping this default template up until I become more familiar with markdown.
