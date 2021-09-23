@@ -1,8 +1,9 @@
 This is my second box I will be attempt to pwn on HackTheBox. Let's get into it!
 
 I did an nmap scan of the box's ip. The results showed that ports 22 and 80 were open. Specifically, port 80 was being used for an Apache web server. This is probably te best lead to go on.
-22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0)
-80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
+
+        22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0)
+        80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
 
 I navigated to the web server and was greeted by an apparent medical site for a company called EMA. The web site was very bare bones. In fact, nothing on the web page was interactable.
 
@@ -20,7 +21,8 @@ The reverse shell allowed me to navigate through the directories! I went to /hom
 
 Now I had to do some privesc to get root. I tried sudo -l and saw this pop up:
 User james may run the following commands on knife:
-    (root) NOPASSWD: /usr/bin/knife
+        
+        (root) NOPASSWD: /usr/bin/knife
 
 I ran knife -h to see what the available options were, but I didn't expect the help page to be so massive. A command that caught my eye was "knife exec". According to the knife documentation (https://docs.chef.io/workstation/knife_exec/), this command is able to run Ruby scripts. The syntax for running Ruby scripts is: knife exec -E 'RUBY CODE'
 
