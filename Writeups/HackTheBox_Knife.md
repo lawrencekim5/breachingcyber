@@ -26,7 +26,9 @@ User james may run the following commands on knife:
 
 I ran knife -h to see what the available options were, but I didn't expect the help page to be so massive. A command that caught my eye was "knife exec". According to the knife documentation (https://docs.chef.io/workstation/knife_exec/), this command is able to run Ruby scripts. The syntax for running Ruby scripts is: knife exec -E 'RUBY CODE'
 
-I tried to figure out how to use Ruby to elevate privileges, but then I remembered the really nifty site, gtfobins.github.io. I searched up knife and found this code: sudo knife exec -E 'exec "/bin/sh"'. Since this knife binary is able to be run as sudo by james, this command makes it so that the elevated privileges are not dropped, granting root access. 
+I tried to figure out how to use Ruby to elevate privileges, but was not able to grasp most of it. I am still very new to scripting! I decided to change tactics.
+
+I decided to go on gtfobins.github.io. This site is really nifty as it provides a massive amount of ways to use binaries to escalate priviliges. I searched up knife and found this code: sudo knife exec -E 'exec "/bin/sh"'. Since this knife binary is able to be run as sudo by james, this command makes it so that the sudo privileges are not dropped after running the command, essentially granting root access. 
 
 After running the command, I ran "whoami" and saw that I was now the root user. I navigated to the root folder and got the root.txt hash: 449e1149cf6e5a01d86acfe53a80780d.
 
