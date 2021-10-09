@@ -7,8 +7,12 @@ I did an nmap scan of the box's ip. The results showed that ports 22 and 80 were
 
 I navigated to the web server and was greeted by an apparent medical site for a company called EMA. The web site was very bare bones. In fact, nothing on the web page was interactable.
 
-I was at a lost at what to do, so I did some googling and learned about gobuster. It's a package that attempts directory traversal through a wordlist. The exact command I used was: gobuster dir -u 10.10.10.242 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 50 -x txt
+I was at a lost at what to do, so I did some googling and learned about gobuster. It's a package that attempts directory traversal through a wordlist. The exact command I used was: 
+
+                gobuster dir -u 10.10.10.242 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 50 -x txt
+                
 I found that /server-status was a valid directory, but I didn't have permissions to access it. Directory enumeration ended up to be a dead end.
+
 
 Next, I decided to take a look at the web server using inspect element. By looking at the header of 10.10.10.242 in the network tab, I was able to see that the website was being powered by PHP/8.1.0-dev.
 I searched for exploits regarding that PHP version and came across this: https://www.exploit-db.com/exploits/49933. Pretty sick find.
@@ -24,11 +28,17 @@ User james may run the following commands on knife:
         
         (root) NOPASSWD: /usr/bin/knife
 
-I ran knife -h to see what the available options were, but I didn't expect the help page to be so massive. A command that caught my eye was "knife exec". According to the knife documentation (https://docs.chef.io/workstation/knife_exec/), this command is able to run Ruby scripts. The syntax for running Ruby scripts is: knife exec -E 'RUBY CODE'
+I ran knife -h to see what the available options were, but I didn't expect the help page to be so massive. A command that caught my eye was "knife exec". According to the knife documentation (https://docs.chef.io/workstation/knife_exec/), this command is able to run Ruby scripts. The syntax for running Ruby scripts is: 
+
+                knife exec -E 'RUBY CODE'
 
 I tried to figure out how to use Ruby to elevate privileges, but was not able to grasp most of it. I am still very new to scripting! I decided to change tactics.
 
-I decided to go on gtfobins.github.io. This site is really nifty as it provides a massive amount of ways to use binaries to escalate priviliges. I searched up knife and found this code: sudo knife exec -E 'exec "/bin/sh"'. Since this knife binary is able to be run as sudo by james, this command makes it so that the sudo privileges are not dropped after running the command, essentially granting root access. 
+I decided to go on gtfobins.github.io. This site is really nifty as it provides a massive amount of ways to use binaries to escalate priviliges. I searched up knife and found this code:
+
+                sudo knife exec -E 'exec "/bin/sh"'
+                
+Since this knife binary is able to be run as sudo by james, this command makes it so that the sudo privileges are not dropped after running the command, essentially granting root access. 
 
 After running the command, I ran "whoami" and saw that I was now the root user. I navigated to the root folder and got the root.txt hash: 449e1149cf6e5a01d86acfe53a80780d.
 
