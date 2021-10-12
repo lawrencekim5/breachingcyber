@@ -1,10 +1,10 @@
 This is my first time trying a HackTheBox machine. I will be going into this blind, let's see how I do.
 
 First thing I did was an nmap scan of the machine's IP. Reconnaissance is always the first step; know your enemy or something like that. Identifying open ports on a machine provides possible attack vectors.
-I used the command
-~~~
-nmap -sS -sV -p- -T5 10.10.10.245
-~~~
+I used the command:
+
+  nmap -sS -sV -p- -T5 10.10.10.245
+
 -sS to do a TCP SYN scan
 -sV to get version info
 -p- to scan all ports
