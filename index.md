@@ -7,6 +7,13 @@ I'm still in the process of learning web design so this site won't be too flashy
 
 Etymology: I picked CyberWinging as the blog name because I like birds and wanted to have my blog name reflect that. I also like whales but CyberWhaling makes it sound like I'm wailing about cybersecurity.
 
+---
+title: Setting Up Your Own Website Using Github Pages
+permalink: /technology/github-pages
+tags: ["technology", "github pages", "github"]
+---
+
+
 ### Certification Writeups
 
 [CompTIA Security+ SYO-501](/Writeups/Certifications/Security+.md)
