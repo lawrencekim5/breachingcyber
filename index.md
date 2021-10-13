@@ -9,9 +9,14 @@ Etymology: I picked CyberWinging as the blog name because I am winging cybersecu
 
 ### Certification Writeups
 
+[CompTIA Security+ SYO-501](/Writeups/Certifications/Security+.md)
+
 ### Competition Writeups
 
+[CCDC2021 Summer Trainings](/Writeups/Competitions/CCDC2021SummerTrainings.md)
+[Hivestorm2021](/Writeups/Competitions/Hivestorm2021.md)
+
 ### HackTheBox Writeups
-[HackTheBox Cap](/Writeups/HackTheBox/Cap.md)  
+[HackTheBox_Cap](/Writeups/HackTheBox/Cap.md)  
 [HackTheBox_Knife](/Writeups/HackTheBox/Knife.md)
 
