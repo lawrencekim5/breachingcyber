@@ -6,6 +6,10 @@ This is a site where I will post writeups about certifcations, CTFs, competition
 
 Etymology: I picked CyberWinging as the blog name because I am winging cybersecurity. I also like birds so I wanted to make a bird pun.
 
+### Certification Writeups
+
+### Competition Writeups
+
 ### HackTheBox Writeups
 [HackTheBox Cap](/Writeups/HackTheBox_Cap.md)  
 [HackTheBox_Knife](/Writeups/HackTheBox_Knife.md)
