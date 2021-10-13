@@ -5,7 +5,7 @@ CyberWinging!
 This is a site where I will post writeups about certifcations, CTFs, competitions, and other personal projects.  
 I'm still in the process of learning web design so this site won't be too flashy for now.
 
-Etymology: I picked CyberWinging as the blog name because I am winging cybersecurity. I also like birds so I wanted to make a bird pun.
+Etymology: I picked CyberWinging as the blog name because I like birds and wanted to have my blog name reflect that. I also like whales but CyberWhaling makes it sound like I'm wailing about cybersecurity.
 
 ### Certification Writeups
 
