@@ -13,7 +13,7 @@ Etymology: I picked CyberWinging as the blog name because I am winging cybersecu
 
 ### Competition Writeups
 
-[CCDC2021 Summer Trainings](/Writeups/Competitions/CCDC2021SummerTrainings.md)
+[CCDC2021 Summer Trainings](/Writeups/Competitions/CCDC2021SummerTrainings.md)  
 [Hivestorm2021](/Writeups/Competitions/Hivestorm2021.md)
 
 ### HackTheBox Writeups
