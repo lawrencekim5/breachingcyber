@@ -11,6 +11,6 @@ Etymology: I picked CyberWinging as the blog name because I am winging cybersecu
 ### Competition Writeups
 
 ### HackTheBox Writeups
-[HackTheBox Cap](/Writeups/HackTheBox_Cap.md)  
-[HackTheBox_Knife](/Writeups/HackTheBox_Knife.md)
+[HackTheBox Cap](/Writeups/HackTheBox/Cap.md)  
+[HackTheBox_Knife](/Writeups/HackTheBox/Knife.md)
 
