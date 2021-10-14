@@ -1,3 +1,7 @@
+layout: page
+title: "PAGE TITLE"
+permalink: https://lawrencekim5.githhub.io/CyberWinging
+
 # Welcome to Lawrence Kim's Blog
 
 CyberWinging!
