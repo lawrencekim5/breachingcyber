@@ -9,7 +9,7 @@ FB3QWEQNWH111DKY
 
 
 ## 1. Why I Decided to Get the Sec+ Certification <a name="1"></a>
-In my early years of college, I knew absolutely nothing about cybersecurity. I became a Computer Information Systems major in my second year of college, taking classes and attending some workshop meetings held by one of my school's technology clubs, SWIFT (Students With an Interest in the Future of Technology). However, I found that it was difficult for me to follow along with the club activites due to my lack of technical knowledge. I chalked up this difficulty to
+In my early years of college, I knew absolutely nothing about cybersecurity. I became a Computer Information Systems major in my second year of college, taking classes and attending some workshop meetings held by one of my school's technology clubs, SWIFT (Students With an Interest in the Future of Technology). However, I found that it was difficult for me to follow along with the club activites due to my lack of technical knowledge. I chalked up this difficulty to the lack of coursework that I have taken, assuming that it would be easier for me to follow along after I have completed my Sophomore year of college.
 
 I took the CompTIA Security+ SYO-501 certification sometime in June 2021. I had no work experience, no IT experience, and barely any school knowledge. 
 
