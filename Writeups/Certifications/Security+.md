@@ -3,7 +3,7 @@ FB3QWEQNWH111DKY
 
 # Taking the CompTIA Sec+ SYO-501 Certification | A Brief Reflection
 1. [Why I Decided to Get the Sec+ Certification](#Why-I-Decided-to-Get-the-Sec+-Certification)
-2. [Resources](#Resources)
+2. [Resources](#resources)
 3. [Study Methods](#Study-Methods)
 
 
