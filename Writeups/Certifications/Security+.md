@@ -2,7 +2,7 @@ Writeup WIP
 FB3QWEQNWH111DKY
 
 # Taking the CompTIA Sec+ SYO-501 Certification | A Breif Reflection
-1. [Example](#example)
+1. [Example](#f)
 
 
 ## Example
