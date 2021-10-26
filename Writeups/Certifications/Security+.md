@@ -1,7 +1,7 @@
 Writeup WIP  
 FB3QWEQNWH111DKY
 
-# Taking the CompTIA Sec+ SYO-501 Certification
+# Taking the CompTIA Sec+ SYO-501 Certification Test
 ## A Brief Reflection
 1. [Why I Decided to Get the Sec+ Certification](#1)
 2. [Resources](#2)
